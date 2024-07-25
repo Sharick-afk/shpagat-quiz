@@ -1,0 +1,105 @@
+.quiz-row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  &__line {
+    position: absolute;
+    left: 60px;
+    right: 70px;
+    bottom: 8px;
+    background-color: $violet;
+    height: 3px;
+  }
+  &__item {
+    input {
+      display: none;
+    }
+    label {
+      position: relative;
+      display: flex;
+      cursor: pointer;
+      padding-bottom: 55px;
+      &::before {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 0);
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        background-color: #d6d9d6;
+        transition: 0.3s;
+        border: 2px solid $violet;
+        content: "";
+      }
+      P {
+        padding: 10px;
+        border-radius: 100px;
+        border: 2px solid $violet;
+        font-size: 16px;
+        font-weight: 600;
+        transition: 0.3s;
+        line-height: 130%;
+        text-transform: lowercase;
+      }
+      &:hover {
+        p {
+          background-color: $violet;
+          color: $w;
+        }
+      }
+    }
+    input:checked ~ label {
+      &::before {
+        transform: translate(-50%, 2px);
+        width: 20px;
+        height: 20px;
+        background-color: $violet;
+      }
+      p {
+        background-color: $violet;
+        color: $w;
+      }
+    }
+  }
+  @media (max-width: 998px) {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+    &__line {
+      left: 0px;
+      right: auto;
+      top: 14px;
+      bottom: 16px;
+      height: auto;
+      width: 3px;
+    }
+    &__item {
+      label {
+        padding-bottom: 0;
+        padding-left: 20px;
+        &::before {
+          left: 2px;
+          bottom: auto;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 8px;
+          height: 8px;
+          border: 1px solid $violet;
+          box-sizing: border-box;
+        }
+        P {
+          border: 1px solid $violet;
+          font-size: 12px;
+        }
+      }
+    }
+    input:checked ~ label {
+      &::before {
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}

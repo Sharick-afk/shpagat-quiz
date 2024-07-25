@@ -1,0 +1,10 @@
+mixin result(modifier)
+  section.result
+    .container
+      h2 Ваш план тренировок<br> для идеального шпагата готов!
+      p У вас отличный потенциал, который, при регулярных занятиях, позволит вам сесть на шпагат всего за 4 недели
+      h3
+        span Попробуйте неделю занятий всего за {{product.displayPrice }} {{ product.displayCurrencySymbol }} 
+        | и раскройте свой потенциал на максимум!
+      a.button.button--main(href="#order-section") Присоединиться
+        img(src="img/arrow.svg", alt="")

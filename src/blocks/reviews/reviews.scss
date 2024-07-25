@@ -1,0 +1,50 @@
+.reviews {
+  padding: 120px 0;
+  background: #1f1f1f;
+  h2 {
+    margin-bottom: 80px;
+    color: $w;
+    font-size: 56px;
+    font-family: $f2;
+    font-weight: 700;
+    line-height: 105%;
+  }
+  @media (min-width: 999px) {
+    .swiper-wrapper {
+      &:is(div) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+      }
+    }
+    .swiper-pagination {
+      display: none;
+      opacity: 0;
+    }
+  }
+  @media (max-width: 998px) {
+    padding: 35px 0;
+    h2 {
+      margin-bottom: 35px;
+      font-size: 20px;
+    }
+    .swiper-pagination {
+      position: static;
+      margin-top: 30px;
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        border-radius: 12px;
+        background-color: transparent;
+        border: 1px solid $w;
+        opacity: 1;
+        transition: 0.3s;
+        box-sizing: border-box;
+        &-active {
+          opacity: 1;
+          background-color: $w;
+        }
+      }
+    }
+  }
+}

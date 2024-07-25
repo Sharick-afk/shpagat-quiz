@@ -1,0 +1,11 @@
+mixin order(modifier)
+  section.order
+    .container#order-section
+      h2 Начните путь к идеальному шпагату уже сегодня!
+      p.order__text Именно сейчас для вас действует специальное предложение
+      p.order__gift Неделя доступа к онлайн-курсу по шпагату всего за {{product.displayPrice }} {{ product.displayCurrencySymbol }} 
+      p.order__price *Первые 7 дней, далее {{product.displayOldPrice }} {{ product.displayCurrencySymbol }}  раз в 7 дней
+      +timer
+      form-tp( form-id='bottom' custom-btn='true' html='<span>Попробовать</span><img src="img/arrow.svg">' btn-text='Попробовать' input-text='Ваш E-mail' :product='product')
+      img(src="img/order-pic.png", alt="")
+

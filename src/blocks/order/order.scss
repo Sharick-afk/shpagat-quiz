@@ -1,0 +1,107 @@
+.order {
+  padding: 120px 0 135px;
+  color: $w;
+  .container {
+    position: relative;
+    > picture {
+      position: absolute;
+      bottom: -67px;
+      right: 54px;
+    }
+  }
+  h2 {
+    margin-bottom: 65px;
+    font-size: 94px;
+    font-family: $f2;
+    font-weight: 700;
+    line-height: 105%;
+  }
+  &__text {
+    position: relative;
+    max-width: 450px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 130%;
+    &::before {
+      position: absolute;
+      right: -25px;
+      top: 22px;
+      content: url(../img/order-arrow.svg);
+    }
+  }
+  &__gift {
+    max-width: 325px;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 20px;
+    background: $w;
+    color: $violet;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 130%;
+    box-sizing: border-box;
+  }
+  &__price {
+    margin-bottom: 50px;
+    font-size: 14px;
+    line-height: 130%;
+  }
+  .timer {
+    max-width: 580px;
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  .form {
+    width: 50%;
+    max-width: 580px;
+  }
+  @media (max-width: 1200px) {
+    .container {
+      > picture {
+        right: -100px;
+        max-width: 50%;
+      }
+    }
+  }
+  @media (max-width: 998px) {
+    padding: 40px 0 25px;
+    .container {
+      > picture {
+        position: static;
+        max-width: 280px;
+        margin: 25px auto 0;
+      }
+    }
+    h2 {
+      margin-bottom: 20px;
+      font-size: 36px;
+    }
+    &__text {
+      max-width: 290px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      &::before {
+        display: none;
+      }
+    }
+    &__gift {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    &__price {
+      max-width: 160px;
+      margin-bottom: 20px;
+      font-size: 12px;
+    }
+    .timer {
+      width: 100%;
+      max-width: none;
+      margin-bottom: 10px;
+    }
+    .form {
+      width: 100%;
+      max-width: none;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+#app {
+  .swiper-container {
+    overflow: hidden;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: static;
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    font-size: 0;
+    background-image: url(../img/arrow.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+  .swiper-button-prev {
+    transform: scale(-1, 1);
+  }
+}

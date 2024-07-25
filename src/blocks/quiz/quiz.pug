@@ -1,0 +1,163 @@
+mixin quiz(modifier)
+  .quiz
+    .quiz__list
+      section.quiz__item.quiz-item.quiz-item--1.active
+        .container
+          h1 Мечтаете сесть на шпагат? 
+          p ответьте на 10 вопросов и получите план тренировок для легкого шпагата уже сейчас! 
+          input(type="checkbox", checked style='display:none;')
+          button.quiz-item__next-button.button.button--main Начать тест
+            img(src="img/arrow.svg" alt="")
+          h3 *Тест займет не более 3 минут
+      section.quiz__item.quiz-item.quiz-item--2
+        .container
+          .quiz-item__col 
+            .quiz-item__step 1/10
+            h2.quiz-item__title Укажите уровень своей<br> физической активности
+            .quiz-item__items
+              +quiz-el("1","1","минимальная физическая активность")
+              +quiz-el("1","2","занимаюсь спортом 1-2 раза в неделю")
+              +quiz-el("1","3","много хожу пешком")
+              +quiz-el("1","4","занимаюсь спортом 3-4 раза в неделю")
+              +quiz-el("1","5","Занимаюсь спортом больше 5 раз в неделю")
+          button(disabled style='display:none;').quiz-item__next-button
+          img(src="img/2.png" alt="")
+      section.quiz__item.quiz-item.quiz-item--3
+        .container
+          .quiz-item__col 
+            .quiz-item__step 2/10
+            h2.quiz-item__title Расскажите<br> о вашей мотивации
+            .quiz-item__items
+              +quiz-el("2","6","Хочу быть более гибкой")
+              +quiz-el("2","7","Убрать отёчность")
+              +quiz-el("2","8","Повысить самооценку")
+              +quiz-el("2","9","Укрепить спину и выровнять осанку")
+              +quiz-el("2","10","Прокачать сексуальность")
+              +quiz-el("2","11","Это просто детская мечта")
+          button(disabled style='display:none;').quiz-item__next-button
+          button.quiz-item__prev-button
+            img(src="img/arrow-back.svg" alt="")
+            | назад
+          img(src="img/3.png" alt="")
+      section.quiz__item.quiz-item.quiz-item--4
+        .container
+          .quiz-item__col 
+            .quiz-item__step 3/10
+            h2.quiz-item__title Оцените уровень своей гибкости на сегодняшний день 
+            .quiz-item__items
+              +quiz-el("3","12","У меня отличная гибкость")
+              +quiz-el("3","13","У меня средне развита гибкость")
+              +quiz-el("3","14","Я не гибкая, но у меня хороший потенциал")
+              +quiz-el("3","15","Я совсем не гибкая")
+          button(disabled style='display:none;').quiz-item__next-button
+          button.quiz-item__prev-button
+            img(src="img/arrow-back.svg" alt="")
+            | назад
+      section.quiz__item.quiz-item.quiz-item--5
+        .container
+          .quiz-item__col 
+            .quiz-item__step 4/10
+            h2.quiz-item__title Сколько часов<br> вы спите?
+            +quiz-row
+          button(disabled style='display:none;').quiz-item__next-button
+          button.quiz-item__prev-button
+            img(src="img/arrow-back.svg" alt="")
+            | назад
+      section.quiz__item.quiz-item.quiz-item--6
+        .container
+          .quiz-item__col 
+            .quiz-item__step 5/10
+            h2.quiz-item__title Сколько времени <br> вы готовы уделять занятиям?
+            .quiz-item__items
+              +quiz-el("4","16","10-15 минут в день")
+              +quiz-el("4","17","Не более часа в день")
+              +quiz-el("4","18","2-3 часа в неделю")
+              +quiz-el("4","19","От 4 часов в неделю")
+          button(disabled style='display:none;').quiz-item__next-button
+          img(src="img/4.png" alt="")
+          button.quiz-item__prev-button
+            img(src="img/arrow-back.svg" alt="")
+            | назад
+      section.quiz__item.quiz-item.quiz-item--7
+        .container
+          .quiz-item__col 
+            .quiz-item__step 6/10
+            h2.quiz-item__title В какое время вы<br> предпочитаете заниматься?
+            .quiz-item__items
+              +quiz-el("5","20","Утром")
+              +quiz-el("5","21","Днем")
+              +quiz-el("5","22","Вечером")
+              +quiz-el("5","23","Всегда по-разному")
+          button(disabled style='display:none;').quiz-item__next-button
+          button.quiz-item__prev-button
+            img(src="img/arrow-back.svg" alt="")
+            | назад
+      section.quiz__item.quiz-item.quiz-item--8
+        .container
+          .quiz-item__col 
+            .quiz-item__step 7/10
+            h2.quiz-item__title Насколько вы бодры<br> в течение дня?
+            .quiz-item__items
+              +quiz-el("6","24","Всегда полно сил, чтобы сделать все дела")
+              +quiz-el("6","25","Устаю уже ближе к обеду")
+              +quiz-el("6","26","К вечеру сильно устаю")
+              +quiz-el("6","27","Просыпаюсь уже без сил")
+          button(disabled style='display:none;').quiz-item__next-button
+          img(src="img/5.png" alt="")
+          button.quiz-item__prev-button
+            img(src="img/arrow-back.svg" alt="")
+            | назад
+      section.quiz__item.quiz-item.quiz-item--10
+        .container
+          .quiz-item__col 
+            .quiz-item__step 8/10
+            h2.quiz-item__title Есть ли у вас<br> вредные привычки?
+            .quiz-item__items
+              +quiz-el("8","28","Я курю")
+              +quiz-el("8","29","Я ем много фаст-фуда")
+              +quiz-el("8","30","Я злоупотребляю газировками")
+              +quiz-el("8","31","Я часто ем сладкое")
+              +quiz-el("8","32","Я выпиваю")
+              +quiz-el("8","33","У меня нет вредных привычек")
+          button(disabled style='display:none;').quiz-item__next-button
+          img(src="img/6.png" alt="")
+          button.quiz-item__prev-button
+            img(src="img/arrow-back.svg" alt="")
+            | назад
+      section.quiz__item.quiz-item.quiz-item--11
+        .container
+          .quiz-item__col 
+            .quiz-item__step 9/10
+            h2.quiz-item__title Сколько стаканов воды<br> вы выпиваете ежедневно?
+            .quiz-item__items
+              +quiz-el("16","34","Вообще не пью воду")
+              +quiz-el("16","35","Не больше 2 стаканов")
+              +quiz-el("16","36","3-4 стакана")
+              +quiz-el("16","37","5-6 стаканов")
+              +quiz-el("16","38","7 и более")
+          button(disabled style='display:none;').quiz-item__next-button
+          button.quiz-item__prev-button
+            img(src="img/arrow-back.svg" alt="")
+            | назад
+      section.quiz__item.quiz-item.quiz-item--12
+        .container
+          .quiz-item__col 
+            .quiz-item__step 10/10
+            h2.quiz-item__title Укажите ваш возраст
+            input#age(type="number" placeholder='Возраст')
+          .quiz-item__row
+            button.quiz-item__prev-button
+              img(src="img/arrow-back.svg" alt="")
+              | назад
+            button(disabled).quiz-item__next-button Дальше
+              img(src="img/arrow.svg", alt="")
+      section.quiz__item.quiz-item.quiz-item--13
+        +load
+        input(type="radio" style='display:none;' )
+        button(disabled style='display:none;').quiz-item__next-button 
+      .quiz__item.quiz-item.quiz-item--14
+        +result
+        .bg-wrapper
+          +y-get
+          +order
+        +reviews

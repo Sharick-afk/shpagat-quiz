@@ -1,0 +1,97 @@
+.form {
+  position: relative;
+  &__email {
+    width: calc(50% - 10px);
+    max-width: 285px;
+    height: 62px;
+    margin-bottom: 20px;
+    padding: 0 30px;
+    color: $w;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: transparent;
+    outline: none;
+    border-radius: 100px;
+    border: 1px solid $w;
+    color: $w;
+    box-sizing: border-box;
+    @media (max-width: 998px) {
+      width: 100%;
+      max-width: none;
+      height: 42px;
+      margin-bottom: 10px;
+      padding: 0 15px;
+      font-size: 13px;
+    }
+
+    &::placeholder {
+      color: $w;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc(50% - 10px);
+    max-width: 285px;
+    height: 62px;
+    margin-bottom: 30px;
+    @media (max-width: 998px) {
+      position: relative;
+      right: auto;
+      top: auto;
+      width: 100%;
+      max-width: none;
+      height: 46px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__check,
+  &__check2 {
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 140%;
+    font-weight: 400;
+    color: $b;
+  }
+
+  &__check-input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &__check-box {
+    display: flex;
+    user-select: none;
+  }
+
+  &__check-input + label::before {
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #535353;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  &__check-input:checked + label::before {
+    background-color: $w;
+    background-image: url("../img/check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px;
+  }
+
+  &__check-text {
+    width: 100%;
+    font-size: 14px;
+    line-height: 120%;
+    font-weight: normal;
+    color: $b;
+  }
+}

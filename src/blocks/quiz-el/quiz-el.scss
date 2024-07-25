@@ -1,0 +1,33 @@
+.quiz-el {
+    input {
+        display: none;
+    }
+    label {
+        position: relative;
+        display: flex;
+        padding: 15px 30px;
+        border-radius: 100px;
+        background: $violet;
+        color: $w;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+            background-color: $green;
+        }
+    }
+    input:checked ~ label {
+        background-color: $green;
+    }
+    @media (max-width: 998px) {
+        label {
+            padding: 10px 15px;
+            font-size: 12px;
+        }
+    }
+    &--1{
+      
+    }
+}

@@ -1,0 +1,3 @@
+include:
+  - project: 'tp/landings-deploy'
+    file: '.gitlab-ci.deploy.yml'
